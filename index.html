@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS Files/index.css">
+    <link rel="stylesheet" href="CSS Files/NavigationBar.css">
+<link rel="icon" href="/images/logo/FST.png">
+
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+</style>
+ 
+    <title>Fear Studio Tweaks</title>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">
+        <img src="images/logo/FST.png" alt="Logo">
+    </div>
+    <div class="menu-left">
+        <a href="#">Home</a>
+        <a href="#">Tweaks</a>
+        <a href="#">About</a>
+    </div>
+
+    <div class="menu-right">
+        <a href="#" class="cta-button">Contact Us</a>
+        <div class="hamburger" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+<div id="mobileMenu" class="mobile-menu">
+    <a href="#" class="closebtn" onclick="toggleMobileMenu()">&times;</a>
+    <a href="#">Home</a>
+    <a href="#">Tweaks</a>
+    <a href="#">About</a>
+    <a href="#" class="cta-button">Contact Us</a>
+</div>
+
+<div class="page1">
+
+    <div class="contentcenter">Welcome to the best free PC tweaks!</div>
+
+    <!-- HERO -->
+    <div class="hero">
+        <div>
+            <div class="hero-eyebrow">100% free · no installer required</div>
+            <h1>Tune your PC.<br>Not your <span>patience.</span></h1>
+            <p>Hand-picked registry tweaks, debloat scripts and config files that make Windows faster and quieter — every one tested, every one free to download.</p>
+            <div class="hero-actions">
+                <a href="#tweaks" class="btn btn-primary">Browse tweaks ↓</a>
+                <a href="#" class="btn btn-ghost">How it works</a>
+            </div>
+        </div>
+
+        <div class="readout">
+            <div class="readout-bar"><span></span><span></span><span></span><span class="readout-title">system_status.log</span></div>
+            <div class="readout-body">
+                <div class="readout-row"><span>Startup impact</span><b class="val-ok">-38%</b></div>
+                <div class="readout-row"><span>Background services</span><div class="bar"><i style="width:30%"></i></div></div>
+                <div class="readout-row"><span>Telemetry</span><b class="val-ok">disabled</b></div>
+                <div class="readout-row"><span>Input latency</span><div class="bar"><i style="width:15%"></i></div></div>
+                <div class="readout-row"><span>Frame time</span><b class="val-ok">stable</b></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats">
+        <div class="stat"><div class="n">120+</div><div class="l">tweaks &amp; scripts</div></div>
+        <div class="stat"><div class="n">6</div><div class="l">categories</div></div>
+        <div class="stat"><div class="n">100%</div><div class="l">free, always</div></div>
+        <div class="stat"><div class="n">0</div><div class="l">bundled bloatware</div></div>
+    </div>
+
+    <!-- TWEAKS -->
+    <div class="tweaks-section" id="tweaks">
+        <div class="section-head">
+            <h2>Browse tweaks</h2>
+            <div class="result-count"><span id="resultCount">1</span> results</div>
+        </div>
+
+        <div class="tabs" id="tabs">
+            <button class="tab active" data-filter="all">All <span class="count"></span></button>
+            <button class="tab" data-filter="performance">⚡ Performance <span class="count"></span></button>
+            <button class="tab" data-filter="gaming">🎮 Gaming <span class="count"></span></button>
+            <button class="tab" data-filter="privacy">🛡️ Privacy &amp; Debloat <span class="count"></span></button>
+            <button class="tab" data-filter="network">🌐 Network <span class="count"></span></button>
+            <button class="tab" data-filter="startup">🚀 Startup &amp; Services <span class="count"></span></button>
+            <button class="tab" data-filter="customization">🎨 Customization <span class="count"></span></button>
+        </div>
+
+        <div class="grid" id="grid">
+
+            <div class="card" data-cat="performance">
+               
+                <h3>Ultimate Performance Plan</h3>
+                <p>Unlocks the hidden power plan Windows keeps disabled by default. Reduces micro-stutters caused by power-state switching.</p>
+                <div class="card-meta"><span>📄 .reg</span><span>4 KB</span><span>⬇ 2.1k</span></div>
+                <a href="/Bat_Files/FearStudioPowerPlan.bat" class="card-dl">Download</a>
+            </div>
+
+            
+
+            <div class="template-card" data-cat="performance">
+               
+                <h3>More Tweaks Soon!</h3 >
+                <p>More tweaks coming soon! Stay tuned for updates.</p>
+                
+            </div>
+
+            
+
+        </div>
+    </div>
+
+</div>
+
+<script>
+function toggleMobileMenu() {
+    const menu = document.getElementById("mobileMenu");
+    if (menu.style.width === "250px") {
+        menu.style.width = "0";
+    } else {
+        menu.style.width = "250px";
+    }
+}
+
+// Category filtering
+const tabs = document.querySelectorAll('.tab');
+const cards = document.querySelectorAll('.card');
+const resultCount = document.getElementById('resultCount');
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const filter = tab.dataset.filter;
+        let visible = 0;
+        cards.forEach(card => {
+            const match = filter === 'all' || card.dataset.cat === filter;
+            card.classList.toggle('hidden', !match);
+            if (match) visible++;
+        });
+        resultCount.textContent = visible;
+    });
+});
+</script>
+
+</body>
+</html>
