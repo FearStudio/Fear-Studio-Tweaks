@@ -55,7 +55,7 @@
             <p>Hand-picked registry tweaks, debloat scripts and config files that make Windows faster and quieter — every one tested, every one free to download.</p>
             <div class="hero-actions">
                 <a href="#tweaks" class="btn btn-primary">Browse tweaks ↓</a>
-                <a href="#" class="btn btn-ghost">How it works</a>
+                <a href="How_It_Works.html" class="btn btn-ghost">How it works</a>
             </div>
         </div>
 
@@ -132,25 +132,45 @@ function toggleMobileMenu() {
     }
 }
 
-// Category filtering
+// Category filtering + live counts
 const tabs = document.querySelectorAll('.tab');
+// Only real tweak cards count — .template-card ("More Tweaks Soon") is excluded
 const cards = document.querySelectorAll('.card');
 const resultCount = document.getElementById('resultCount');
+
+function updateTabCounts() {
+    tabs.forEach(tab => {
+        const countSpan = tab.querySelector('.count');
+        if (!countSpan) return;
+        const filter = tab.dataset.filter;
+        const count = filter === 'all'
+            ? cards.length
+            : document.querySelectorAll(`.card[data-cat="${filter}"]`).length;
+        countSpan.textContent = count;
+    });
+}
+
+function applyFilter(filter) {
+    let visible = 0;
+    cards.forEach(card => {
+        const match = filter === 'all' || card.dataset.cat === filter;
+        card.classList.toggle('hidden', !match);
+        if (match) visible++;
+    });
+    resultCount.textContent = visible;
+}
 
 tabs.forEach(tab => {
     tab.addEventListener('click', () => {
         tabs.forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
-        const filter = tab.dataset.filter;
-        let visible = 0;
-        cards.forEach(card => {
-            const match = filter === 'all' || card.dataset.cat === filter;
-            card.classList.toggle('hidden', !match);
-            if (match) visible++;
-        });
-        resultCount.textContent = visible;
+        applyFilter(tab.dataset.filter);
     });
 });
+
+// Initialize counts and results on page load
+updateTabCounts();
+applyFilter('all');
 </script>
 
 </body>

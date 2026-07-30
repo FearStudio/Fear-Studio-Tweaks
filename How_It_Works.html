@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS Files/index.css">
+    <link rel="stylesheet" href="CSS Files/NavigationBar.css">
+    <link rel="stylesheet" href="CSS Files/How_It_Works.css">
+<link rel="icon" href="/images/logo/FST.png">
+
+
+
+    <title>How It Works - Fear Studio Tweaks</title>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">
+        <img src="images/logo/FST.png" alt="Logo">
+    </div>
+    <div class="menu-left">
+        <a href="index.html">Home</a>
+        <a href="index.html#tweaks">Tweaks</a>
+        <a href="#">About</a>
+    </div>
+
+    <div class="menu-right">
+        <a href="#" class="cta-button">Contact Us</a>
+        <div class="hamburger" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+<div id="mobileMenu" class="mobile-menu">
+    <a href="#" class="closebtn" onclick="toggleMobileMenu()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="index.html#tweaks">Tweaks</a>
+    <a href="#">About</a>
+    <a href="#" class="cta-button">Contact Us</a>
+</div>
+
+<div class="page1">
+
+    <!-- HERO -->
+    <div class="hiw-hero">
+        <div class="hero-eyebrow">no experience needed</div>
+        <h1>How it <span>works.</span></h1>
+        <p>Four steps between you and a faster, quieter Windows install. No installer, no account, no catch.</p>
+    </div>
+
+    <!-- STEPS -->
+    <div class="steps-section">
+        <div class="steps">
+
+            <div class="step">
+                <div class="step-num">1</div>
+                <h3>Browse tweaks</h3>
+                <p>Filter by category — Performance, Gaming, Privacy, Network, Startup, or Customization — and find what fits your setup.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-num">2</div>
+                <h3>Download the file</h3>
+                <p>Each tweak ships as a small .reg, .bat, or .ps1 file. No bundled installers, no extra downloads, no bloat.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-num">3</div>
+                <h3>Run it</h3>
+                <p>Right-click and "Run as administrator" for .bat and .ps1 files. Double-click and confirm the prompt for .reg files.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-num">4</div>
+                <h3>Restart if needed</h3>
+                <p>Most tweaks apply instantly. Some — like service or registry changes — need a restart to fully take effect.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- SAFETY -->
+    <div class="safety-section">
+        <div class="safety-box">
+            <div class="icon">🛡️</div>
+            <div>
+                <h3>Every tweak is reviewed before it's posted</h3>
+                <p>We check registry paths, service names, and script logic against official documentation before anything goes live. If a tweak changes a system setting, we tell you exactly what it touches — and how to reverse it if you change your mind.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq-section">
+        <h2>Common questions</h2>
+
+        <div class="faq-item">
+            <h4>Is this safe to run?</h4>
+            <p>Yes — every tweak only touches the specific setting it describes. That said, registry and service edits are still system changes, so we recommend creating a restore point first if you're cautious.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Do I need to install anything?</h4>
+            <p>No. Every download is a standalone file you run once. Then you press Number 1 to apply the tweak and watch the changes take effect.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Can I undo a tweak?</h4>
+            <p>Yes. Each tweak includes a "revert" option that restores the original setting.</p>        
+
+        <div class="faq-item">
+            <h4>Why do some scripts need administrator access?</h4>
+            <p>Anything that edits HKLM registry keys, Windows services, or system-level settings requires elevated permissions — that's a Windows requirement, not something specific to these scripts.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Will this work on my version of Windows?</h4>
+            <p>Each tweak lists which Windows versions it's been tested on. Some features — like the taskbar "End Task" option — are Windows 11 23H2+ only and simply won't do anything on older builds.</p>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="hiw-cta">
+        <a href="index.html#tweaks" class="btn btn-primary">Browse tweaks ↓</a>
+    </div>
+
+</div>
+
+<script>
+function toggleMobileMenu() {
+    const menu = document.getElementById("mobileMenu");
+    if (menu.style.width === "250px") {
+        menu.style.width = "0";
+    } else {
+        menu.style.width = "250px";
+    }
+}
+</script>
+
+</body>
+</html>

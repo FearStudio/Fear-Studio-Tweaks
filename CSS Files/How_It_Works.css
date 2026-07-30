@@ -1,0 +1,159 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ---------- HOW IT WORKS PAGE ---------- */
+.hiw-hero{
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 72px 24px 20px;
+    text-align: center;
+}
+.hiw-hero .hero-eyebrow{
+    justify-content: center;
+}
+.hiw-hero h1{
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.1;
+    margin: 0 0 14px;
+    letter-spacing: -0.01em;
+}
+.hiw-hero h1 span{ color: var(--accent); }
+.hiw-hero p{
+    color: var(--text-dim);
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 56ch;
+    margin: 0 auto;
+}
+
+.steps-section{
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 50px 24px 30px;
+}
+.steps{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+.step{
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 22px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    transition: 0.2s ease;
+}
+.step:hover{
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.3);
+}
+.step-num{
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    background: rgba(0,123,255,0.12);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.step h3{
+    color: white;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 18px;
+    margin: 0;
+}
+.step p{
+    font-size: 13.5px;
+    color: var(--text-dim);
+    line-height: 1.55;
+    margin: 0;
+}
+
+.safety-section{
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 40px 24px;
+}
+.safety-box{
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--ok);
+    border-radius: 10px;
+    padding: 22px 24px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+.safety-box .icon{
+    font-size: 22px;
+    line-height: 1;
+}
+.safety-box h3{
+    color: white;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 17px;
+    margin: 0 0 6px;
+}
+.safety-box p{
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.faq-section{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 24px 90px;
+}
+.faq-section h2{
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    margin: 0 0 24px;
+}
+.faq-item{
+    border-bottom: 1px dashed var(--line);
+    padding: 18px 0;
+}
+.faq-item:first-child{ padding-top: 0; }
+.faq-item h4{
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 16px;
+    color: var(--text);
+    margin: 0 0 8px;
+}
+.faq-item p{
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.hiw-cta{
+    
+    max-width: 1160px;
+    margin: 0 auto 90px;
+    padding: 20px 24px;
+    text-align: center;
+}
+
+@media screen and (max-width: 980px){
+    .steps{ grid-template-columns: repeat(2, 1fr); }
+}
+@media screen and (max-width: 620px){
+    .hiw-hero h1{ font-size: 32px; }
+    .steps{ grid-template-columns: 1fr; }
+    .safety-box{ flex-direction: column; }
+}
