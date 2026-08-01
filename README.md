@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="images/logo/logo.png" alt="Fear Studio Tweaks" width="220">
-
 # FEAR STUDIO TWEAKS
 
 **Free, no-nonsense Windows optimisation tools — built for gamers and enthusiasts who want their hardware to actually perform.**
