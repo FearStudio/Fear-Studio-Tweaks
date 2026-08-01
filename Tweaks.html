@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS Files/index.css">
+    <link rel="stylesheet" href="CSS Files/NavigationBar.css">
+    <link rel="stylesheet" href="CSS Files/Tweaks.css">
+<link rel="icon" href="/images/logo/FearStudio Tweaks.png">
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+</style>
+
+    <title>Tweaks - Fear Studio Tweaks</title>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">
+        <img src="images/logo/FST.png" alt="Logo">
+    </div>
+    <div class="menu-left">
+        <a href="index.html">Home</a>
+        <a href="Tweaks.html">Tweaks</a>
+        <a href="About.html">About</a>
+    </div>
+
+    <div class="menu-right">
+        <a href="Suggest_a_Tweak.html" class="cta-button">Suggest a Tweak</a>
+        <div class="hamburger" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+<div id="mobileMenu" class="mobile-menu">
+    <a href="#" class="closebtn" onclick="toggleMobileMenu()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="Tweaks.html">Tweaks</a>
+    <a href="About.html">About</a>
+    <a href="Suggest_a_Tweak.html" class="cta-button">Suggest a Tweak</a>
+</div>
+
+<div class="page1">
+
+    <!-- HERO -->
+    <div class="tw-hero">
+        <div class="hero-eyebrow">120+ tweaks · 6 categories</div>
+        <h1>Find your <span>fix.</span></h1>
+        <p>Every tweak here does one job, does it well, and tells you exactly what it touches. Filter by category, grab the file, run it.</p>
+    </div>
+
+    <!-- TWEAKS -->
+    <div class="tweaks-section" id="tweaks">
+        <div class="section-head">
+            <h2>Browse tweaks</h2>
+            <div class="result-count"><span id="resultCount">1</span> results</div>
+        </div>
+
+        <div class="tabs" id="tabs">
+            <button class="tab active" data-filter="all">All <span class="count"></span></button>
+            <button class="tab" data-filter="performance">⚡ Performance <span class="count"></span></button>
+            <button class="tab" data-filter="gaming">🎮 Gaming <span class="count"></span></button>
+            <button class="tab" data-filter="privacy">🛡️ Privacy &amp; Debloat <span class="count"></span></button>
+            <button class="tab" data-filter="network">🌐 Network <span class="count"></span></button>
+            <button class="tab" data-filter="startup">🚀 Startup &amp; Services <span class="count"></span></button>
+            <button class="tab" data-filter="customization">🎨 Customization <span class="count"></span></button>
+        </div>
+
+        <div class="grid" id="grid">
+
+            <div class="card" data-cat="performance">
+
+                <h3>Ultimate Performance Plan</h3>
+                <p>Unlocks the hidden power plan Windows keeps disabled by default. Reduces micro-stutters caused by power-state switching.</p>
+                <div class="card-meta"><span>📄 .bat</span><span>7 KB</span><span>⬇ 185</span></div>
+                <a href="Tweak_Files/Power_Plan/FearStudioPowerPlan.bat" class="card-dl">Download</a>
+            </div>
+
+             <div class="card" data-cat="Performance">
+
+                <h3>Disables Background Apps</h3>
+                <p>Stops unnecessary background apps from running to reduce RAM usage, lower CPU activity and improve overall system responsiveness.</p>
+                <div class="card-meta"><span>📄 .bat</span><span>3 KB</span><span>⬇ 129</span></div>
+                <a href="Tweak_Files/Background Apps Disable/Background_Apps_Disable.bat" class="card-dl">Download</a>
+            </div>
+
+            <div class="card" data-cat="privacy">
+
+                <h3>Disables Consumer Features</h3>
+                <p>Removes Windows consumer features, app suggestions and promotional content for a cleaner experience.</p>
+                <div class="card-meta"><span>📄 .bat</span><span>3 KB</span><span>⬇ 100</span></div>
+                <a href="Tweak_Files/Consumer Features Disable/Consumer_Features_Disable.bat" class="card-dl">Download</a>
+            </div>
+
+            <div class="card" data-cat="network">
+
+                <h3>Disables Delivery Optimization</h3>
+                <p>Prevents Windows from using your internet connection to upload updates to other devices, reducing background bandwidth usage.</p>
+                <div class="card-meta"><span>📄 .bat</span><span>3 KB</span><span>⬇ 48</span></div>
+                <a href="Tweak_Files/Delivery Optimization - Disable/Delivery_Optimization.bat" class="card-dl">Download</a>
+            </div>
+
+            <div class="card" data-cat="customization">
+
+                <h3>Adds "End Task" Context Menu</h3>
+                <p>Adds a right-click menu option to instantly end unresponsive applications without opening Task Manager.</p>
+                <div class="card-meta"><span>📄 .bat</span><span>3 KB</span><span>⬇ 100</span></div>
+                <a href="Tweak_Files/End_With_Right_Click/End_With_Right_Click.bat" class="card-dl">Download</a>
+            </div>
+
+            <div class="card" data-cat="privacy">
+
+                <h3>Disables Location Tracking</h3>
+                <p>Turns off Windows location services to improve privacy and prevent unnecessary background location access.</p>
+                <div class="card-meta"><span>📄 .bat</span><span>3 KB</span><span>⬇ 56</span></div>
+                <a href="Tweak_Files/Location Tracking/Location_Tracking.bat" class="card-dl">Download</a>
+            </div>
+
+
+            <div class="card" data-cat="network">
+
+                <h3>Optimizes Network Settings</h3>
+                <p>Applies networking tweaks to reduce latency, improve stability and enhance online gaming and browsing performance.</p>
+                <div class="card-meta"><span>📄 .bat</span><span>7 KB</span><span>⬇ 33</span></div>
+                <a href="Tweak_Files/Network/FearStudioNetworkTweak.bat" class="card-dl">Download</a>
+            </div>
+
+            <div class="card" data-cat="performance">
+
+                <h3>Optimized Power Plan</h3>
+                <p>Configures Windows power settings for maximum performance by minimizing power-saving delays and reducing micro-stutters.</p>
+                <div class="card-meta"><span>📄 .bat</span><span>7 KB</span><span>⬇ 386</span></div>
+                <a href="Tweak_Files/Power_Plan/FearStudioPowerPlan.bat" class="card-dl">Download</a>
+            </div>
+
+            <div class="card" data-cat="startup">
+
+                <h3>Optimizes Windows Services</h3>
+                <p>Disables or configures non-essential services to reduce resource usage and improve overall system performance.</p>
+                <div class="card-meta"><span>📄 .bat</span><span>2 KB</span><span>⬇ 132</span></div>
+                <a href="Tweak_Files/Services Optimizer/Services_Optimizer.bat" class="card-dl">Download</a>
+            </div>
+
+            <div class="card" data-cat="privacy">
+
+                <h3>Disables Windows Telemetry</h3>
+                <p>Reduces diagnostic data collection and background telemetry services to improve privacy and lower system overhead.</p>
+                <div class="card-meta"><span>📄 .bat</span><span>7 KB</span><span>⬇ 310</span></div>
+                <a href="Tweak_Files/Telemetry Disable/Telemetry Disable.bat" class="card-dl">Download</a>
+            </div>
+
+             <div class="card" data-cat="performance">
+
+                <h3>Cleans Temporary Files </h3>
+                <p>Deletes temporary files from Windows temp folders to free up disk space.</p>
+                <div class="card-meta"><span>📄 .bat</span><span>2 KB</span><span>⬇ 15</span></div>
+                <a href="Tweak_Files/Temp Files Delete/Temp_Files_Delete.bat" class="card-dl">Download</a>
+            </div>
+
+
+
+            <div class="template-card" data-cat="performance">
+
+                <h3>More Tweaks Soon!</h3>
+                <p>More tweaks coming soon! Stay tuned for updates.</p>
+
+            </div>
+
+            <div class="template-card">
+                <h3>Got an idea?</h3>
+                <p>Missing a tweak you'd like to see? Tell us about it.</p>
+                <a href="Suggest_a_Tweak.html" class="card-dl" style="margin-top:auto;">Suggest a tweak →</a>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<script>
+function toggleMobileMenu() {
+    const menu = document.getElementById("mobileMenu");
+    if (menu.style.width === "250px") {
+        menu.style.width = "0";
+    } else {
+        menu.style.width = "250px";
+    }
+}
+
+// Category filtering + live counts
+const tabs = document.querySelectorAll('.tab');
+// Only real tweak cards count — .template-card cards are excluded
+const cards = document.querySelectorAll('.card');
+const resultCount = document.getElementById('resultCount');
+
+function updateTabCounts() {
+    tabs.forEach(tab => {
+        const countSpan = tab.querySelector('.count');
+        if (!countSpan) return;
+        const filter = tab.dataset.filter;
+        const count = filter === 'all'
+            ? cards.length
+            : document.querySelectorAll(`.card[data-cat="${filter}"]`).length;
+        countSpan.textContent = count;
+    });
+}
+
+function applyFilter(filter) {
+    let visible = 0;
+    cards.forEach(card => {
+        const match = filter === 'all' || card.dataset.cat === filter;
+        card.classList.toggle('hidden', !match);
+        if (match) visible++;
+    });
+    resultCount.textContent = visible;
+}
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        applyFilter(tab.dataset.filter);
+    });
+});
+
+// Initialize counts and results on page load
+updateTabCounts();
+applyFilter('all');
+</script>
+
+</body>
+</html>

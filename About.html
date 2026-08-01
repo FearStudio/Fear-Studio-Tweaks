@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS Files/index.css">
+    <link rel="stylesheet" href="CSS Files/NavigationBar.css">
+    <link rel="stylesheet" href="CSS Files/About.css">
+    <link rel="stylesheet" href="CSS Files/CookieConsent.css">
+<link rel="icon" href="/images/logo/FearStudio Tweaks.png">
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+</style>
+
+    <title>About - Fear Studio Tweaks</title>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">
+        <img src="images/logo/FST.png" alt="Logo">
+    </div>
+    <div class="menu-left">
+        <a href="index.html">Home</a>
+        <a href="Tweaks.html">Tweaks</a>
+        <a href="About.html">About</a>
+    </div>
+
+    <div class="menu-right">
+        <a href="Suggest_a_Tweak.html" class="cta-button">Suggest a Tweak</a>
+        <div class="hamburger" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+<div id="mobileMenu" class="mobile-menu">
+    <a href="#" class="closebtn" onclick="toggleMobileMenu()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="Tweaks.html">Tweaks</a>
+    <a href="About.html">About</a>
+    <a href="Suggest_a_Tweak.html" class="cta-button">Suggest a Tweak</a>
+</div>
+
+<div class="page1">
+
+    <!-- HERO -->
+    <div class="ab-hero">
+        <div class="hero-eyebrow">what's actually in the download</div>
+        <h1>What each <span>tweak</span> does.</h1>
+        <p>"Tweak" covers a lot of ground — a registry key, a scheduled task, a service tucked away in the background. Here's what each category actually changes on your machine, and why it's there.</p>
+    </div>
+
+    <!-- CATEGORIES -->
+    <div class="ab-categories">
+        <div class="ab-grid">
+
+            <div class="ab-card">
+                <div class="ab-icon">⚡</div>
+                <h3>Performance</h3>
+                <p>Power plan settings, CPU parking, and background throttling. These tweaks stop Windows from quietly slowing your machine down to save a few watts it doesn't need to save on a desktop or plugged-in laptop.</p>
+            </div>
+
+            <div class="ab-card">
+                <div class="ab-icon">🎮</div>
+                <h3>Gaming</h3>
+                <p>Input latency, GPU scheduling, and fullscreen optimizations. Aimed at shaving milliseconds off the path between your mouse and the frame on screen — the stuff that matters in competitive play.</p>
+            </div>
+
+            <div class="ab-card">
+                <div class="ab-icon">🛡️</div>
+                <h3>Privacy &amp; Debloat</h3>
+                <p>Telemetry, ad ID, and diagnostic data collection switched off, plus removal of preinstalled apps you never asked for. Nothing here touches security features like Defender or Windows Update.</p>
+            </div>
+
+            <div class="ab-card">
+                <div class="ab-icon">🌐</div>
+                <h3>Network</h3>
+                <p>DNS, TCP window scaling, and background bandwidth throttling. These adjust how Windows negotiates and prioritizes your connection — useful on both slow links and fast ones.</p>
+            </div>
+
+            <div class="ab-card">
+                <div class="ab-icon">🚀</div>
+                <h3>Startup &amp; Services</h3>
+                <p>Trims what launches at boot and disables Windows services you're not using. The goal is a shorter path from power button to a usable desktop, not a stripped-down system that breaks things.</p>
+            </div>
+
+            <div class="ab-card">
+                <div class="ab-icon">🎨</div>
+                <h3>Customization</h3>
+                <p>Taskbar, right-click menu, and File Explorer behavior. Mostly cosmetic, but it's the category people ask for most — small changes that make Windows feel like yours again.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- PROCESS -->
+    <div class="ab-process">
+        <div class="ab-process-box">
+            <div class="ab-process-text">
+                <h2>How a tweak gets made</h2>
+                <p>Every tweak starts as a specific, named problem — "Windows won't let me pick the Ultimate Performance plan," not "make my PC faster." We find the exact setting responsible, confirm it against official Microsoft documentation, and test it on a clean install before it's written up.</p>
+                <p>The write-up you see on the <a href="Tweaks.html">Tweaks page</a> lists exactly what gets changed and how to revert it. If a tweak can't be cleanly explained or cleanly undone, it doesn't get posted — that rule doesn't bend for how impressive the result looks.</p>
+            </div>
+            <a href="How_It_Works.html" class="btn btn-ghost">See the download &amp; run process →</a>
+        </div>
+    </div>
+
+<!-- DOWNLOAD EXPECTATIONS -->
+<section class="ab-download">
+
+    <div class="hero-eyebrow">before you run a tweak</div>
+
+    <h2>What to expect after downloading</h2>
+
+    <p class="ab-download-intro">
+        Every Fear Studio tweak is a plain Windows Batch (<strong>.bat</strong>) file.
+        Because batch files cannot be digitally signed like installers, Windows may
+        display a security prompt before the tweak runs. This is normal behaviour for
+        batch scripts.
+    </p>
+
+    <div class="windows-warning">
+
+        <div class="warning-title">
+            <span class="warning-icon">🛡️</span>
+            Open File - Security Warning
+        </div>
+
+        <div class="warning-body">
+
+            <p class="warning-text">
+                The publisher could not be verified. Are you sure you want to run this software?
+            </p>
+
+            <table class="warning-table">
+                <tr>
+                    <td>Name</td>
+                    <td>C:\Users\Example\Downloads\FearStudioPowerPlan.bat</td>
+                </tr>
+
+                <tr>
+                    <td>Publisher</td>
+                    <td>Unknown Publisher</td>
+                </tr>
+
+                <tr>
+                    <td>Type</td>
+                    <td>Windows Batch File (.bat)</td>
+                </tr>
+
+                <tr>
+                    <td>Location</td>
+                    <td>Downloads Folder</td>
+                </tr>
+            </table>
+
+            <div class="warning-buttons">
+                <button class="run-btn">Run</button>
+                <button class="cancel-btn">Cancel</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="trust-grid">
+
+        <div class="trust-card">
+            <div>📄</div>
+            <h3>Readable Code</h3>
+            <p>
+                Every tweak is written as plain text. You can right-click and open it
+                with Notepad before running.
+            </p>
+        </div>
+
+        <div class="trust-card">
+            <div>🔍</div>
+            <h3>No Hidden Commands</h3>
+            <p>
+                There are no encrypted scripts or compiled executables—everything is
+                visible and easy to inspect.
+            </p>
+        </div>
+
+        <div class="trust-card">
+            <div>🌐</div>
+            <h3>Open Source</h3>
+            <p>
+                Every tweak is available in the GitHub repository under the
+                <strong>Tweaks</strong> folder so anyone can review the code.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- CTA -->
+    <div class="ab-cta">
+        <h2>Know a fix that's missing?</h2>
+        <p>If there's a setting you always change by hand after a fresh install, it probably belongs here.</p>
+        <a href="Suggest_a_Tweak.html" class="btn btn-primary">Suggest a tweak →</a>
+    </div>
+
+</div>
+
+<script>
+function toggleMobileMenu() {
+    const menu = document.getElementById("mobileMenu");
+    if (menu.style.width === "250px") {
+        menu.style.width = "0";
+    } else {
+        menu.style.width = "250px";
+    }
+}
+</script>
+<script src="CookieConsent.js"></script>
+
+</body>
+</html>

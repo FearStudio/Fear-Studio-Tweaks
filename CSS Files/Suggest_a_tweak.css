@@ -1,0 +1,109 @@
+/* ---------- SUGGEST A TWEAK HERO ---------- */
+.sg-hero{
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 72px 24px 10px;
+    text-align: center;
+}
+.sg-hero .hero-eyebrow{
+    justify-content: center;
+}
+.sg-hero h1{
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.1;
+    margin: 0 0 14px;
+    letter-spacing: -0.01em;
+}
+.sg-hero h1 span{ color: var(--accent); }
+.sg-hero p{
+    color: var(--text-dim);
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 56ch;
+    margin: 0 auto;
+}
+
+/* ---------- FORM SECTION ---------- */
+.sg-form-section{
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 24px 100px;
+}
+
+/* ---------- MICROSOFT FORMS EMBED ---------- */
+.sg-form-embed{
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.3);
+}
+.sg-form-embed iframe{
+    display: block;
+    width: 100%;
+    height: 900px;
+    border: none;
+    background: #fff; /* Microsoft Forms renders on a white canvas */
+}
+
+.sg-note{
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text-dim);
+    text-align: center;
+    margin: 16px 0 0;
+}
+.sg-note a{
+    color: var(--accent);
+    text-decoration: none;
+}
+.sg-note a:hover{ text-decoration: underline; }
+
+/* ---------- MARK AS SUBMITTED ---------- */
+.sg-mark-sent{
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.sg-mark-sent .btn{ width: 100%; max-width: 320px; justify-content: center; }
+.sg-mark-sent .sg-note{ margin: 0; max-width: 46ch; }
+
+/* ---------- COOLDOWN MESSAGE ---------- */
+.sg-cooldown{
+    max-width: 500px;
+    margin: 40px auto 100px;
+    padding: 40px 32px;
+    text-align: center;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--ok);
+    border-radius: 10px;
+}
+.sg-cooldown .icon{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.sg-cooldown h3{
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 20px;
+    color: white;
+    margin: 0 0 8px;
+}
+.sg-cooldown p{
+    color: var(--text-dim);
+    font-size: 14.5px;
+    line-height: 1.6;
+    margin: 0 0 22px;
+}
+
+.hidden{ display: none !important; }
+
+@media screen and (max-width: 620px){
+    .sg-hero h1{ font-size: 32px; }
+    .sg-form-embed iframe{ height: 1000px; }
+}

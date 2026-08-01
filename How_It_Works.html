@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="CSS Files/index.css">
     <link rel="stylesheet" href="CSS Files/NavigationBar.css">
     <link rel="stylesheet" href="CSS Files/How_It_Works.css">
-<link rel="icon" href="/images/logo/FST.png">
+
+<link rel="icon" href="/images/logo/FearStudio Tweaks.png">
 
 
 
@@ -41,7 +42,7 @@
     <a href="#" class="cta-button">Contact Us</a>
 </div>
 
-<div class="page1">
+<div class="page1 locked">
 
     <!-- HERO -->
     <div class="hiw-hero">
@@ -92,6 +93,51 @@
         </div>
     </div>
 
+    <!-- SMARTSCREEN WARNING -->
+    <div class="hiw-warning">
+        <div class="hero-eyebrow">before you click run</div>
+        <h2>Why Windows shows a warning</h2>
+        <p class="hiw-warning-intro">Every Fear Studio tweak is a plain <strong>.bat</strong> file. Batch files can't be digitally signed the way commercial installers can, so Windows SmartScreen has no publisher certificate to check against — and shows this prompt by default. It's standard behaviour for any unsigned script, not a sign that something's wrong with the specific file.</p>
+
+        <div class="windows-warning">
+            <div class="warning-title">
+                <span class="warning-icon">🛡️</span>
+                Open File - Security Warning
+            </div>
+            <div class="warning-body">
+                <p class="warning-text">The publisher could not be verified. Are you sure you want to run this software?</p>
+                <table class="warning-table">
+                    <tr>
+                        <td>Name</td>
+                        <td>...ks\Fear_Studio_Ultimate_Performance_Power_Plan.bat</td>
+                    </tr>
+                    <tr>
+                        <td>Publisher</td>
+                        <td>Unknown Publisher</td>
+                    </tr>
+                    <tr>
+                        <td>Type</td>
+                        <td>Windows Batch File</td>
+                    </tr>
+                    <tr>
+                        <td>From</td>
+                        <td>G:\Fear Studio\PC Tweaks\Fear_Studio_Ultimate_Performance...</td>
+                    </tr>
+                </table>
+                <div class="warning-buttons">
+                    <button class="run-btn">Run</button>
+                    <button class="cancel-btn">Cancel</button>
+                </div>
+                <div class="warning-footer">
+                    <span class="warning-footer-icon">⚠️</span>
+                    <p class="warning-footer-text">This file does not have a valid digital signature that verifies its publisher. You should only run software from publishers you trust.<br><a href="#">How can I decide what software to run?</a></p>
+                </div>
+            </div>
+        </div>
+
+        <p class="hiw-warning-note">Not sure whether to trust it? Right-click any tweak and open it with Notepad first — every script is plain, readable text with no hidden or compiled code, and the full source is on <strong>GitHub</strong>. If you're happy with what it does, click <strong>Run</strong> to continue.</p>
+    </div>
+
     <!-- FAQ -->
     <div class="faq-section">
         <h2>Common questions</h2>
@@ -108,7 +154,8 @@
 
         <div class="faq-item">
             <h4>Can I undo a tweak?</h4>
-            <p>Yes. Each tweak includes a "revert" option that restores the original setting.</p>        
+            <p>Yes. Each tweak includes a "revert" option that restores the original setting.</p>
+        </div>
 
         <div class="faq-item">
             <h4>Why do some scripts need administrator access?</h4>
@@ -127,6 +174,9 @@
     </div>
 
 </div>
+
+
+
 
 <script>
 function toggleMobileMenu() {

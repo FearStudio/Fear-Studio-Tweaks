@@ -1,0 +1,361 @@
+/* ---------- ABOUT PAGE HERO ---------- */
+.ab-hero{
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 72px 24px 20px;
+    text-align: center;
+}
+.ab-hero .hero-eyebrow{
+    justify-content: center;
+}
+.ab-hero h1{
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.1;
+    margin: 0 0 14px;
+    letter-spacing: -0.01em;
+}
+.ab-hero h1 span{ color: var(--accent); }
+.ab-hero p{
+    color: var(--text-dim);
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 62ch;
+    margin: 0 auto;
+}
+
+/* ---------- CATEGORY CARDS ---------- */
+.ab-categories{
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 50px 24px 20px;
+}
+.ab-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+.ab-card{
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 24px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: 0.2s ease;
+}
+.ab-card:hover{
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.3);
+}
+.ab-icon{
+    font-size: 24px;
+    line-height: 1;
+}
+.ab-card h3{
+    color: white;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 18px;
+    margin: 0;
+}
+.ab-card p{
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ---------- PROCESS ---------- */
+.ab-process{
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 30px 24px;
+}
+.ab-process-box{
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 30px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+.ab-process-text h2{
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 12px;
+}
+.ab-process-text p{
+    font-size: 14.5px;
+    color: var(--text-dim);
+    line-height: 1.65;
+    margin: 0 0 12px;
+}
+.ab-process-text p:last-child{ margin-bottom: 0; }
+.ab-process-text a{
+    color: var(--accent);
+    text-decoration: none;
+}
+.ab-process-text a:hover{ text-decoration: underline; }
+
+/* ---------- CTA ---------- */
+.ab-cta{
+    max-width: 1160px;
+    margin: 0px auto 90px;
+    padding: 30px 24px;
+    text-align: center;
+}
+.ab-cta h2{
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 10px;
+}
+.ab-cta p{
+    color: var(--text-dim);
+    font-size: 14.5px;
+    margin: 0 0 22px;
+}
+
+@media screen and (max-width: 980px){
+    .ab-grid{ grid-template-columns: repeat(2,1fr); }
+}
+@media screen and (max-width: 620px){
+    .ab-hero h1{ font-size: 32px; }
+    .ab-grid{ grid-template-columns: 1fr; }
+}
+
+/* ---------------- DOWNLOAD ---------------- */
+
+.ab-download{
+    max-width:1100px;
+    margin:80px auto;
+    padding:0 24px;
+    text-align:center;
+}
+
+.ab-download h2{
+    font-family:"Roboto Condensed",sans-serif;
+    color:#fff;
+    font-size:38px;
+    margin:12px 0 18px;
+}
+
+.ab-download-intro{
+    max-width:760px;
+    margin:auto;
+    color:var(--text-dim);
+    line-height:1.7;
+}
+
+/* Fake Windows Prompt */
+
+.windows-warning{
+
+    margin:50px auto;
+
+    max-width:760px;
+
+    background:#f4f4f4;
+
+    color:#222;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.35);
+
+    text-align:left;
+
+}
+
+.warning-title{
+
+    background:#ffffff;
+
+    padding:15px 20px;
+
+    border-bottom:1px solid #ddd;
+
+    font-weight:600;
+
+    display:flex;
+
+    gap:12px;
+
+    align-items:center;
+
+}
+
+.warning-icon{
+
+    font-size:22px;
+
+}
+
+.warning-body{
+
+    padding:28px;
+
+}
+
+.warning-text{
+
+    margin-bottom:25px;
+
+    color:#444;
+
+    line-height:1.6;
+
+}
+
+.warning-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    font-size:14px;
+
+}
+
+.warning-table td{
+
+    padding:10px 0;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+.warning-table td:first-child{
+
+    width:140px;
+
+    font-weight:600;
+
+    color:#666;
+
+}
+
+.warning-buttons{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:12px;
+
+    margin-top:30px;
+
+}
+
+.run-btn{
+
+    background:#0078D4;
+
+    color:white;
+
+    border:none;
+
+    padding:11px 26px;
+
+    border-radius:6px;
+
+    font-weight:600;
+
+}
+
+.cancel-btn{
+
+    background:#e6e6e6;
+
+    border:none;
+
+    padding:11px 26px;
+
+    border-radius:6px;
+
+    color:#222;
+
+}
+
+/* Trust cards */
+
+.trust-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:18px;
+
+    margin-top:40px;
+
+}
+
+.trust-card{
+
+    background:var(--panel);
+
+    border:1px solid var(--line);
+
+    border-radius:10px;
+
+    padding:25px;
+
+    transition:.2s;
+
+}
+
+.trust-card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:var(--accent);
+
+}
+
+.trust-card div{
+
+    font-size:30px;
+
+    margin-bottom:15px;
+
+}
+
+.trust-card h3{
+
+    color:white;
+
+    margin-bottom:10px;
+
+    font-family:"Roboto Condensed",sans-serif;
+
+}
+
+.trust-card p{
+
+    color:var(--text-dim);
+
+    line-height:1.7;
+
+}
+
+@media(max-width:900px){
+
+.trust-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}

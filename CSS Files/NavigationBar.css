@@ -54,7 +54,7 @@ body {
 
 /* CONTACT BUTTON */
 .cta-button {
-    background-color: #007bff;
+    background-color: #ff0000;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -63,7 +63,7 @@ body {
 }
 
 .cta-button:hover {
-    background-color: #0056b3;
+    background-color: #b30000;
 }
 
 

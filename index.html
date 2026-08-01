@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS Files/index.css">
     <link rel="stylesheet" href="CSS Files/NavigationBar.css">
-<link rel="icon" href="/images/logo/FST.png">
+<link rel="icon" href="/images/logo/FearStudio Tweaks.png">
 
 
     <style>
@@ -21,13 +21,13 @@
         <img src="images/logo/FST.png" alt="Logo">
     </div>
     <div class="menu-left">
-        <a href="#">Home</a>
-        <a href="#">Tweaks</a>
-        <a href="#">About</a>
+        <a href="index.html">Home</a>
+        <a href="Tweaks.html">Tweaks</a>
+        <a href="About.html">About</a>
     </div>
 
     <div class="menu-right">
-        <a href="#" class="cta-button">Contact Us</a>
+        <a href="Suggest_a_Tweak.html" class="cta-button">Suggest a Tweak</a>
         <div class="hamburger" onclick="toggleMobileMenu()">
             <span></span>
             <span></span>
@@ -37,10 +37,10 @@
 </nav>
 <div id="mobileMenu" class="mobile-menu">
     <a href="#" class="closebtn" onclick="toggleMobileMenu()">&times;</a>
-    <a href="#">Home</a>
-    <a href="#">Tweaks</a>
-    <a href="#">About</a>
-    <a href="#" class="cta-button">Contact Us</a>
+    <a href="index.html">Home</a>
+    <a href="Tweaks.html">Tweaks</a>
+    <a href="About.html">About</a>
+    <a href="Suggest_a_Tweak.html" class="cta-button">Suggest a Tweak</a>
 </div>
 
 <div class="page1">
@@ -54,7 +54,7 @@
             <h1>Tune your PC.<br>Not your <span>patience.</span></h1>
             <p>Hand-picked registry tweaks, debloat scripts and config files that make Windows faster and quieter — every one tested, every one free to download.</p>
             <div class="hero-actions">
-                <a href="#tweaks" class="btn btn-primary">Browse tweaks ↓</a>
+                <a href="Tweaks.html" class="btn btn-primary">Browse tweaks ↓</a>
                 <a href="How_It_Works.html" class="btn btn-ghost">How it works</a>
             </div>
         </div>
@@ -79,44 +79,14 @@
         <div class="stat"><div class="n">0</div><div class="l">bundled bloatware</div></div>
     </div>
 
-    <!-- TWEAKS -->
-    <div class="tweaks-section" id="tweaks">
-        <div class="section-head">
-            <h2>Browse tweaks</h2>
-            <div class="result-count"><span id="resultCount">1</span> results</div>
-        </div>
-
-        <div class="tabs" id="tabs">
-            <button class="tab active" data-filter="all">All <span class="count"></span></button>
-            <button class="tab" data-filter="performance">⚡ Performance <span class="count"></span></button>
-            <button class="tab" data-filter="gaming">🎮 Gaming <span class="count"></span></button>
-            <button class="tab" data-filter="privacy">🛡️ Privacy &amp; Debloat <span class="count"></span></button>
-            <button class="tab" data-filter="network">🌐 Network <span class="count"></span></button>
-            <button class="tab" data-filter="startup">🚀 Startup &amp; Services <span class="count"></span></button>
-            <button class="tab" data-filter="customization">🎨 Customization <span class="count"></span></button>
-        </div>
-
-        <div class="grid" id="grid">
-
-            <div class="card" data-cat="performance">
-               
-                <h3>Ultimate Performance Plan</h3>
-                <p>Unlocks the hidden power plan Windows keeps disabled by default. Reduces micro-stutters caused by power-state switching.</p>
-                <div class="card-meta"><span>📄 .reg</span><span>4 KB</span><span>⬇ 2.1k</span></div>
-                <a href="#" class="card-dl">Out Soon!</a>
+    <!-- TWEAKS TEASER -->
+    <div class="tweaks-teaser">
+        <div class="teaser-box">
+            <div>
+                <h2>Six categories. One goal.</h2>
+                <p>Performance, Gaming, Privacy &amp; Debloat, Network, Startup &amp; Services, Customization — every tweak reviewed, every download free.</p>
             </div>
-
-            
-
-            <div class="template-card" data-cat="performance">
-               
-                <h3>More Tweaks Soon!</h3 >
-                <p>More tweaks coming soon! Stay tuned for updates.</p>
-                
-            </div>
-
-            
-
+            <a href="Tweaks.html" class="btn btn-primary">Browse all tweaks →</a>
         </div>
     </div>
 
@@ -131,46 +101,6 @@ function toggleMobileMenu() {
         menu.style.width = "250px";
     }
 }
-
-// Category filtering + live counts
-const tabs = document.querySelectorAll('.tab');
-// Only real tweak cards count — .template-card ("More Tweaks Soon") is excluded
-const cards = document.querySelectorAll('.card');
-const resultCount = document.getElementById('resultCount');
-
-function updateTabCounts() {
-    tabs.forEach(tab => {
-        const countSpan = tab.querySelector('.count');
-        if (!countSpan) return;
-        const filter = tab.dataset.filter;
-        const count = filter === 'all'
-            ? cards.length
-            : document.querySelectorAll(`.card[data-cat="${filter}"]`).length;
-        countSpan.textContent = count;
-    });
-}
-
-function applyFilter(filter) {
-    let visible = 0;
-    cards.forEach(card => {
-        const match = filter === 'all' || card.dataset.cat === filter;
-        card.classList.toggle('hidden', !match);
-        if (match) visible++;
-    });
-    resultCount.textContent = visible;
-}
-
-tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-        tabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-        applyFilter(tab.dataset.filter);
-    });
-});
-
-// Initialize counts and results on page load
-updateTabCounts();
-applyFilter('all');
 </script>
 
 </body>
