@@ -14,7 +14,7 @@
 
 ## Overview
 
-**Fear Studio Tweaks** is a collection of carefully tested `.bat` scripts and a companion website designed to reduce latency, cut background overhead, and optimise Windows for gaming and general responsiveness. Every tweak is documented, reversible, and built around a single principle: **know exactly what a script changes before you run it.**
+**Fear Studio Tweaks** is a collection of carefully tested `.bat` scripts and a companion website designed to reduce latency, cut background overhead and optimise Windows for gaming and general responsiveness. Every tweak is documented, reversible and built around a single principle: **know exactly what a script changes before you run it.**
 
 No bundled installers. No telemetry of our own. No bloat — just scripts and a static site.
 
