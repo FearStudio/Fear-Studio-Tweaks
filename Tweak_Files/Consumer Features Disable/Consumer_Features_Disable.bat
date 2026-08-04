@@ -26,7 +26,7 @@ echo      - Stops promoted app installs
 echo      - Reduces Microsoft Store suggestions
 echo.
 echo  [2] Restore Default Settings
-echo      
+echo.      
 echo.
 echo  [3] Exit
 echo.
